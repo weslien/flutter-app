@@ -12,6 +12,12 @@ class Company {
 
     id = getStringOrDefault(json['id']);
     name = getStringOrDefault(json['name']);
+    industry = getStringOrDefault(json['industry']);
+    employees = getStringOrDefault(json['employees']);
+    address1 = getStringOrDefault(json['address1']);
+    address2 = getStringOrDefault(json['address2']);
+    city = getStringOrDefault(json['city']);
+    zip = getStringOrDefault(json['zip']);
 
   }
 
