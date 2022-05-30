@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'company.dart';
+import 'firebase/company.dart';
 
 class BusinessCard extends StatelessWidget {
   final Company company;

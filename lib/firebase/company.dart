@@ -7,9 +7,10 @@ class Company {
   String? address2;
   String? city;
   String? zip;
-  Company(this.id, this.name);
-  Company.fromJson(json) {
 
+  Company(this.id, this.name);
+
+  Company.fromJson(json) {
     id = getStringOrDefault(json['id']);
     name = getStringOrDefault(json['name']);
     industry = getStringOrDefault(json['industry']);
@@ -18,7 +19,6 @@ class Company {
     address2 = getStringOrDefault(json['address2']);
     city = getStringOrDefault(json['city']);
     zip = getStringOrDefault(json['zip']);
-
   }
 
   ///
@@ -28,7 +28,10 @@ class Company {
     var result = <Company>[];
 
     for (var el in list) {
-      {result.add(Company(getStringOrDefault(el.id), getStringOrDefault(el.name)));};
+      {
+        result.add(
+            Company(getStringOrDefault(el.id), getStringOrDefault(el.name)));
+      }
     }
     return result;
   }
@@ -40,8 +43,6 @@ class Company {
   static String getStringOrDefault(dynamic value) {
     return value is String ? value : '';
   }
-
-
 
   @override
   String toString() {
